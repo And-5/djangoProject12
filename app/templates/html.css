@@ -1,16 +1,43 @@
+* {
+  outline: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
 .container {
     width: 1180px;
     margin: 0 auto;
 }
 
-.container_2 {
-    width: 1180px;
-    height: 325px;
-    margin: 0 auto;
-    /*color: #000000A6;*/
-    /*background-color: rgba(0, 0, 0, 0.65);*/
+.container_customer {
+    padding: 87px 0 112px;
+}
+
+.content {
+    z-index: 3;
+    position: relative;
+}
+
+.stylish {
+    width: 100%;
+    padding: 76px 0 49px;
     background-image: url("img/background_1.png");
-    filter: brightness(65%);
+    /*background-repeat: no-repeat;*/
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.stylish::after {
+    content: "";
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.65);
+    z-index: 2;
 }
 
 .title {
@@ -28,8 +55,17 @@
     text-align: center;
     color: white;
     font-weight: normal;
-    padding: 76px 0 48px;
     margin: 0 auto;
+    padding: 0 0 48px;
+}
+
+.title_3 {
+    font-family: Raleway;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 0 0 34px;
 }
 
 .line {
@@ -44,6 +80,7 @@
     height: 1px;
     background: white;
     margin: 0 auto;
+    /*padding: 48px 0 30px;*/
 }
 
 .text_1 {
@@ -62,6 +99,7 @@
     line-height: 19px;
     padding: 30px 0 30px;
     font-family: Raleway;
+    font-style: normal;
 }
 
 .art1 {
@@ -76,8 +114,9 @@
 }
 
 .block_column {
-    border: #0b2e13;
-    flex: 1;
+    /*border: #0b2e13;*/
+    /*flex: 1;*/
+    /*width: 33%;*/
 }
 
 .block_item {
@@ -108,7 +147,6 @@
 }
 
 .btn_1 {
-    /*text-align: center;*/
     color: white;
     font-family: "Open Sans";
     border: 1px solid white;
@@ -116,11 +154,13 @@
     padding: 11px 26px;
     margin: 0 auto;
     text-decoration: none;
+    font-size: 15px;
+    font-height: 20px;
 }
 
-.footer {
+.social {
     background: black;
-    width: 1180px;
+    width: 100%;
     height: 101px;
     margin: 0 auto;
 }
@@ -140,3 +180,394 @@
     font-size: 14px;
     line-height: 16px;
 }
+
+.subtitle {
+    text-align: center;
+    font-family: "Open Sans";
+    font-size: 14px;
+    line-height: 19px;
+    color: #86878B;
+    padding: 0 0 67px;
+}
+
+.line_red {
+    margin: 0 auto 34px;
+}
+
+
+.cards_reviews {
+    display:flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.card_content {
+    width: 33%;
+}
+
+.card_content_text {
+    background: #E2E2E2;
+    border-radius: 7px;
+    color: #86878B;
+    font-family: Open Sans;
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
+    padding: 13px 27px 7px 27px;
+}
+
+.card_info {
+    display: flex;
+    justify-content: flex-start;
+    padding: 22px 0 0 0;
+}
+
+.user_info_name {
+    font-size: 20px;
+    line-height: 27px;
+    font-family: "Open Sans";
+    font-weight: bold;
+    padding: 8px 0 12px 0;
+}
+
+.user_info_job {
+    font-size: 14px;
+    line-height: 19px;
+    font-family: "Open Sans";
+    color: #86878B;
+    text-align: right;
+}
+
+.user_avatar {
+    padding: 0 45px 0 44px;
+}
+
+.user_info {
+    text-align: start;
+}
+
+.pricing_title {
+    text-align: center;
+    font-family: Raleway;
+    font-size: 36px;
+    line-height: 42px;
+    text-transform: uppercase;
+    margin: 0 0 34px;
+}
+
+.pricing_description {
+    text-align: center;
+    font-family: "Open Sans";
+    font-size: 14px;
+    line-height: 19px;
+    color: #86878B;
+    margin: 34px 0 0;
+
+}
+
+.section_pricing {
+    padding: 80px 0 60px;
+    background: #F5F5F5;
+}
+
+.price_ {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 62px;
+}
+
+/*.price_2 {*/
+/*    margin: -15px;*/
+/*}*/
+.price:nth-child(2) {
+    margin: -15px;
+}
+
+
+.price_box {
+    text-align: center;
+}
+
+.name_package {
+    width: 340px;
+    height: 50px;
+    background: #333333;
+    margin: 0 0 1px;
+}
+
+.package_text {
+    font-family: Open Sans;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 27px;
+    color: #FFFFFF;
+    padding-top: 15px;
+    margin: 0 auto;
+}
+
+.value {
+    width: 340px;
+    height: 100px;
+    background: #333333;
+    margin: 2px 0 2px;
+}
+
+.value_text {
+    font-family: Raleway;
+    font-weight: bold;
+    font-size: 35px;
+    line-height: 41px;
+    color: #FFFFFF;
+    padding: 26px 0 33px;
+    margin: 0 auto;
+}
+
+.price_title {
+    width: 340px;
+    height: 50px;
+    background: #333333;
+}
+
+.price_text {
+    font-size: 14px;
+    line-height: 19px;
+    color: rgba(255, 255, 255, 0.5);
+    padding-top: 17px;
+}
+
+.offer_text {
+    text-align: center;
+    padding: 0;
+    margin: 0 auto;
+    list-style: none;
+
+}
+
+.offer_backgr {
+    width: 340px;
+    height: 30px;
+    background: white;
+    margin: 4px 0 4px;
+}
+
+.offer_text_value {
+    padding-top: 10px;
+    font-family: Open Sans;
+    font-size: 14px;
+    line-height: 19px;
+    color: #86878B;
+}
+
+.tabs_body {
+    display: flex;
+    padding: 125px 0;
+}
+.tab_column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 0 58px;
+}
+
+.tab_backgr {
+    width: 110px;
+    height: 110px;
+    background-color: #333333;
+    margin: 0 118px 10px 0;
+    border-radius: 5px;
+}
+
+.tab_backgr:hover{
+    background: #EC7979;
+}
+.tab_text {
+    color: white;
+    text-align: center;
+    font-family: Open Sans;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 110px;
+    text-transform: uppercase;
+}
+
+.tabs_title {
+    font-size: 20px;
+    line-height: 27px;
+    font-family: "Open Sans";
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 0 0 58px;
+}
+
+.tabs_info {
+    font-family: Open Sans;
+    font-size: 14px;
+    line-height: 19px;
+    padding: 0 50px 0 0 ;
+    text-transform: uppercase;
+}
+
+.tabs_btn {
+    background: #EC7979;
+    color: white;
+    font-family: "Open Sans";
+    padding: 11px 26px;
+    margin: 89px 0 0;
+    text-decoration: none;
+    font-size: 15px;
+    font-height: 20px;
+    text-align: center;
+    width: max-content;
+}
+
+.tabs_img_pick {
+    margin-top: -25px;
+}
+
+.tab_3 {
+    margin-bottom: 0px;
+}
+
+.header {
+    height: 70px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+}
+
+.header_padding {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navigation ul li {
+    display: inline-block;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.navigation ul li a {
+    font-family: Open Sans;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 20px;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0 auto;
+    text-decoration: none;
+}
+
+.navigation ul li:last-child {
+    padding: 0 0 0 24px;
+}
+
+.axit_backgr {
+    height: calc(100vh - 70px);
+    background-image: url("img/background_2.png");
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+.axit_backgr::after {
+    content: "";
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 70px;
+    height: calc(100% - 70px);
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 2;
+}
+
+.axit_body {
+    display: flex;
+    justify-content: space-between;
+    z-index: 3;
+    position: relative;
+}
+
+.axit_title {
+    color: white;
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 42px;
+    max-width: 544px;
+}
+
+
+
+.axit_logo img {
+    padding: 0 0 32px;
+}
+
+.line_axit {
+    margin: 32px 745px 39px 0;
+    background: white;
+}
+
+.axit_context {
+    max-width: 282px;
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 39px;
+}
+
+.btn_axit{
+    display: block;
+    width: max-content;
+    margin-left: 0;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+.free_trial {
+    background: white;
+    width: 370px;
+    height: 316px;
+    border-radius: 8px 8px 0 0;
+}
+
+.free_trial_title {
+    text-align: center;
+    line-height: 56px;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.free_red {
+    color: #EC7979;
+}
+
+.free_trial_btn {
+    text-align: center;
+    color: white;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 53px;
+    background: #EC7979;
+    width: 370px;
+    height: 53px;
+    border-radius: 0 0 8px 8px;
+}
+
+.date {
+    display: flex;
+    flex-direction: column;
+}
+
+
+

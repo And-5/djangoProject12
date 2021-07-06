@@ -1,0 +1,29 @@
+nav {
+    background: #d41212;
+    height: 100px;
+}
+.form {
+    /*float: right;*/
+}
+
+.col-2 {
+     background: #eceeec;
+ }
+
+.btnuser {
+    text-align: right;
+    padding-top: 35px;
+}
+
+.btnex {
+    text-align: right;
+    color: white;
+    padding-top: 35px;
+}
+
+input:focus {
+    border: 2px solid #82c90c;
+    /*border-radius: 20px/20px;*/
+}
+
+

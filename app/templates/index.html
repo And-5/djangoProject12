@@ -1,0 +1,11 @@
+{% extends 'common.html' %}
+
+{% block content %}
+{% load i18n %}
+ <p>{% trans 'Под действием гидроксиламина альдегиды превращаются в оксимы:' %}
+   СН<sub>3</sub>СНО + NH<sub>2</sub>OH =
+   CH<sub>3</sub>C(=NOH)H + H<sub>2</sub>O</p>
+    18<sup>2</sup>
+    <span >&#128386</span>
+    <img src='{{ Person3.photo.url }}'>
+{% endblock %}
