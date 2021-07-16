@@ -157,44 +157,24 @@ import pickle
 from pymemcache import Client
 from app.models import Person
 
-# def main(request):
-#     client = Client(('localhost', 11211))
-#     people = client.get('people')
-#     if people is None:
-#         people = []
-#         for person in Person.objects.all()[:5]:
-#             people.append(person.name)
-#         client.set(
-#             'people',
-#             pickle.dumps(people),
-#             expire=60
-#         )
-#     else:
-#         people = pickle.loads(people)
-#     return render(
-#         request,
-#         'index.html',
-#         {
-#             'people': people
-#         }
-#     )
-
-
-def server(request):
-    if 'id' in request.POST:
-        Person.objects.filter(
-            id=request.POST['id']
-        ).update(
-            age=int(request.POST['age'])
+def main(request):
+    client = Client(('localhost', 11211))
+    people = client.get('people')
+    if people is None:
+        people = []
+        for person in Person.objects.all()[:5]:
+            people.append(person.name)
+        client.set(
+            'people',
+            pickle.dumps(people),
+            expire=60
         )
-        return JsonResponse({'status': 'Ok'})
     else:
-        spisok = []
-        id = request.GET['id']
-        Person.objects.filter(id=id)
-        for i in Person.objects.filter(id=id):
-            spisok.append({
-                'name': i.name,
-                'age': i.age
-            })
-        return JsonResponse({'status': 'Ok'})
+        people = pickle.loads(people)
+    return render(
+        request,
+        'index.html',
+        {
+            'people': people
+        }
+    )
